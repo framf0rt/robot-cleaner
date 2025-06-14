@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCleaner", "RobotCleaner\RobotCleaner.csproj", "{AEBE0B26-0167-46E9-932E-4C02717B08C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{65CCAACC-4292-47FE-94F6-1860B39BBEAE}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+		.env = .env
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCleaner.Tests", "RobotCleaner.Tests\RobotCleaner.Tests.csproj", "{7EE0D159-A1EC-4E08-9290-87EF55BD9F0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEBE0B26-0167-46E9-932E-4C02717B08C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEBE0B26-0167-46E9-932E-4C02717B08C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBE0B26-0167-46E9-932E-4C02717B08C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEBE0B26-0167-46E9-932E-4C02717B08C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE0D159-A1EC-4E08-9290-87EF55BD9F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE0D159-A1EC-4E08-9290-87EF55BD9F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE0D159-A1EC-4E08-9290-87EF55BD9F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE0D159-A1EC-4E08-9290-87EF55BD9F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

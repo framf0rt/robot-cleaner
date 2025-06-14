@@ -1,0 +1,38 @@
+# This is a generated file. Not intended for manual editing.
+version: "3"
+services:
+  robotcleaner:
+    build:
+      context: "/home/anders/RiderProjects/RobotCleaner"
+      dockerfile: "RobotCleaner/Dockerfile"
+      target: "base"
+      args:
+        BUILD_CONFIGURATION: "Debug"
+    command: []
+    entrypoint:
+    - "/opt/JetBrains/RiderDebuggerTools/linux-x64/JetBrains.Debugger.Worker"
+    - "--runtimeconfig"
+    - "/opt/JetBrains/RiderDebuggerTools/JetBrains.Debugger.Worker.runtimeconfig.json"
+    - "--mode=server"
+    - "--frontend-port=57000"
+    - "--backend-port=57200"
+    - "--roslyn-worker-port=57400"
+    - "--timeout=60"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      RIDER_DEBUGGER_LOG_DIR: "/var/opt/JetBrains/RiderDebuggerTools"
+      RESHARPER_LOG_CONF: "/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
+    image: "robotcleaner:dev"
+    ports:
+    - "127.0.0.1:57002:57000"
+    - "127.0.0.1:57202:57200"
+    - "127.0.0.1:57402:57400"
+    volumes:
+    - "/home/anders/RiderProjects/RobotCleaner/RobotCleaner:/app:rw"
+    - "/home/anders/RiderProjects/RobotCleaner:/src:rw"
+    - "/home/anders/.nuget/packages:/home/app/.nuget/packages"
+    - "/home/anders/.local/share/JetBrains/RiderRemoteDebugger/2024.3/Linux64:/opt/JetBrains/RiderDebuggerTools"
+    - "/home/anders/.local/share/JetBrains/Toolbox/apps/rider/bin/backend-log.xml:/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
+    - "/home/anders/.cache/JetBrains/Rider2024.3/log/DebuggerWorker/JetBrains.Debugger.Worker.2024_12_13_18_29_28:/var/opt/JetBrains/RiderDebuggerTools:rw"
+    working_dir: "/app"

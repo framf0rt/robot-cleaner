@@ -1,0 +1,30 @@
+meta {
+  name: Post Cleaned
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5001/developer-test/execute
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "start": {
+      "x": 10,
+      "y": 22
+    },
+    "commands": [
+      {
+        "direction": "east",
+        "steps": 2
+      },
+      {
+        "direction": "north",
+        "steps": 1
+      }
+    ]
+  }
+}
